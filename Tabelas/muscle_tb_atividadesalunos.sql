@@ -1,2 +1,0 @@
-CREATE DATABASE  IF NOT EXISTS `muscle` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `muscle`;
