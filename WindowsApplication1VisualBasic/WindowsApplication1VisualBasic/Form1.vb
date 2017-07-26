@@ -1,4 +1,7 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System
+Imports MySql.Data.MySqlClient
+Imports System.Data
+
 Public Class Login
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
@@ -53,16 +56,14 @@ Public Class Login
     End Sub
     Private Sub BuscaDados2()
         'Dim sql = "SELECT * FROM Produtos WHERE (Codigo = " & Convert.ToInt32(txtCodigo.Text) & ")"
-        Dim sql = "SELECT * FROM tb_pessoas WHERE CPF = 2020220"
+        Dim sql = "SELECT * FROM muscle.tb_Pessoas WHERE CPF = 00259923176"
 
         Dim dt As DataTable = DAL.AcessoBD.ExecutarComando(sql, CommandType.Text, Nothing, DAL.AcessoBD.TipoDeComando.ExecuteDataTable)
-        'TextBox1.Text = dt.Rows(0).Item("NomePessoa").ToString()
-        'TextBox2.Text = dt.Rows(0).Item("CPF").ToString()
-        'TextBox3.Text = dt.Rows(0).Item("DataInclusao").ToString()
 
-        TextBox1.Text = dt("NomePessoa").ToString
-        TextBox2.Text = dt("CPF").ToString
-        TextBox3.Text = dt("DataInclusao").ToString
+        'txtDescricao.Text = dt.Rows(0).Item("Descricao").ToString()
+        TextBox1.Text = dt.Rows(0).Item("NomePessoa").ToString()
+        TextBox2.Text = dt.Rows(0).Item("CPF").ToString
+        TextBox3.Text = dt.Rows(0).Item("DataInclusao").ToString
 
     End Sub
     Private Sub BuscaDados()

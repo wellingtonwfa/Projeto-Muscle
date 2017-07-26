@@ -59,14 +59,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProjetoMuscle.exe" size="68560">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProjetoMuscle.exe" size="68048">
       <assemblyIdentity name="ProjetoMuscle" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>X5Cd5y33ugYvmfUiYc16dGA4IaDvVab5/V0RJNvlJhw=</dsig:DigestValue>
+        <dsig:DigestValue>ga3ZR9P8ujoOQ1MEmzzA1t5q2ZqI4wdkdTD78IjR7x4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
