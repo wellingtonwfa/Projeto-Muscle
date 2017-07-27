@@ -7,7 +7,7 @@ Public Class Login
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Dim MDIForm As New Form
 
-        FormMDI.Show()
+        SAN.Show()
         MDIForm.Close()
 
     End Sub
