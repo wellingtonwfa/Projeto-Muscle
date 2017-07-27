@@ -114,6 +114,12 @@
     <Compile Include="CadastroCliente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CadastroObjetivo.Designer.vb">
+      <DependentUpon>CadastroObjetivo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroObjetivo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
@@ -145,6 +151,9 @@
   <ItemGroup>
     <EmbeddedResource Include="CadastroCliente.resx">
       <DependentUpon>CadastroCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroObjetivo.resx">
+      <DependentUpon>CadastroObjetivo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
