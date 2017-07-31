@@ -6,3 +6,11 @@ D:\Teste\WindowsApplication1VisualBasic\DAL\obj\Debug\DAL.vbproj.GenerateResourc
 D:\Teste\WindowsApplication1VisualBasic\DAL\obj\Debug\DAL.dll
 D:\Teste\WindowsApplication1VisualBasic\DAL\obj\Debug\DAL.xml
 D:\Teste\WindowsApplication1VisualBasic\DAL\obj\Debug\DAL.pdb
+C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\DAL\bin\Debug\DAL.dll
+C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\DAL\bin\Debug\DAL.pdb
+C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\DAL\bin\Debug\DAL.xml
+C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\DAL\obj\Debug\DAL.Resources.resources
+C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\DAL\obj\Debug\DAL.vbproj.GenerateResource.Cache
+C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\DAL\obj\Debug\DAL.dll
+C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\DAL\obj\Debug\DAL.xml
+C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\DAL\obj\Debug\DAL.pdb

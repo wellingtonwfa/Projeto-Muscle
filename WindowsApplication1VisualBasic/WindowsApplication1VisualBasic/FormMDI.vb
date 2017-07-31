@@ -15,4 +15,10 @@
     Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
 
     End Sub
+
+    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
+        Dim NewMDIFilho As New CadastroObjetivo()
+        NewMDIFilho.MdiParent = Me
+        NewMDIFilho.Show()
+    End Sub
 End Class

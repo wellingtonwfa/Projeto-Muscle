@@ -33,8 +33,12 @@ C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBa
 C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\WindowsApplication1VisualBasic\obj\Debug\ProjetoMuscle.vbprojResolveAssemblyReference.cache
 C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\WindowsApplication1VisualBasic\obj\Debug\ProjetoMuscle.CadastroCliente.resources
 C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\WindowsApplication1VisualBasic\obj\Debug\ProjetoMuscle.Login.resources
-C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\WindowsApplication1VisualBasic\obj\Debug\ProjetoMuscle.FormMDI.resources
 C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\WindowsApplication1VisualBasic\obj\Debug\ProjetoMuscle.Resources.resources
 C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\WindowsApplication1VisualBasic\obj\Debug\ProjetoMuscle.vbproj.GenerateResource.Cache
 C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\WindowsApplication1VisualBasic\obj\Debug\ProjetoMuscle.exe.manifest
 C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\WindowsApplication1VisualBasic\obj\Debug\ProjetoMuscle.application
+C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\WindowsApplication1VisualBasic\bin\Debug\yo\ProjetoMuscle.resources.dll
+C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\WindowsApplication1VisualBasic\obj\Debug\ProjetoMuscle.CadastroObjetivo.resources
+C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\WindowsApplication1VisualBasic\obj\Debug\ProjetoMuscle.SAN.resources
+C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\WindowsApplication1VisualBasic\obj\Debug\ProjetoMuscle.SAN.yo.resources
+C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\WindowsApplication1VisualBasic\obj\Debug\yo\ProjetoMuscle.resources.dll
