@@ -42,12 +42,12 @@ Partial Class CadastroAlimento
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.lblPesquisar = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.grdRefeicao = New System.Windows.Forms.DataGridView()
+        Me.grdAlimento = New System.Windows.Forms.DataGridView()
         Me.txtNomeAlimentoPesq = New System.Windows.Forms.TextBox()
         Me.lblNomeAlimentoPesq = New System.Windows.Forms.Label()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.grdRefeicao, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.grdAlimento, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ToolStrip1
@@ -197,7 +197,7 @@ Partial Class CadastroAlimento
         '
         Me.GroupBox1.Controls.Add(Me.lblPesquisar)
         Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.grdRefeicao)
+        Me.GroupBox1.Controls.Add(Me.grdAlimento)
         Me.GroupBox1.Controls.Add(Me.txtNomeAlimentoPesq)
         Me.GroupBox1.Controls.Add(Me.lblNomeAlimentoPesq)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 151)
@@ -225,13 +225,13 @@ Partial Class CadastroAlimento
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'grdRefeicao
+        'grdAlimento
         '
-        Me.grdRefeicao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.grdRefeicao.Location = New System.Drawing.Point(10, 76)
-        Me.grdRefeicao.Name = "grdRefeicao"
-        Me.grdRefeicao.Size = New System.Drawing.Size(491, 135)
-        Me.grdRefeicao.TabIndex = 14
+        Me.grdAlimento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.grdAlimento.Location = New System.Drawing.Point(10, 76)
+        Me.grdAlimento.Name = "grdAlimento"
+        Me.grdAlimento.Size = New System.Drawing.Size(491, 135)
+        Me.grdAlimento.TabIndex = 14
         '
         'txtNomeAlimentoPesq
         '
@@ -275,7 +275,7 @@ Partial Class CadastroAlimento
         Me.ToolStrip1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.grdRefeicao, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grdAlimento, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -300,7 +300,7 @@ Partial Class CadastroAlimento
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents txtNomeAlimentoPesq As TextBox
     Friend WithEvents lblNomeAlimentoPesq As Label
-    Friend WithEvents grdRefeicao As DataGridView
+    Friend WithEvents grdAlimento As DataGridView
     Friend WithEvents Button1 As Button
     Friend WithEvents lblPesquisar As Label
 End Class
