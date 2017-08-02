@@ -41,7 +41,7 @@ Partial Class CadastroCliente
         Me.ClientSize = New System.Drawing.Size(284, 262)
         Me.Controls.Add(Me.Label1)
         Me.Name = "CadastroCliente"
-        Me.Text = "CadastroCliente"
+        Me.Text = "Cadastro de Cliente"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
         Me.PerformLayout()

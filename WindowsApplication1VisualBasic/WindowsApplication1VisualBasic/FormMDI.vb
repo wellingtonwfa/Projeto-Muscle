@@ -1,10 +1,6 @@
 ﻿Public Class SAN
 
-    Private Sub ToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem3.Click
-        End
-    End Sub
-
-    Private Sub ToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem2.Click
+    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
         Dim NewMDIFilho As New CadastroCliente()
         NewMDIFilho.MdiParent = Me
         NewMDIFilho.Show()
@@ -12,12 +8,30 @@
         'CadastroCliente.Show()
     End Sub
 
-    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
-
+    Private Sub CadastroDeObjetivosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CadastroDeObjetivosToolStripMenuItem.Click
+        Dim NewMDIFilho As New CadastroObjetivo()
+        NewMDIFilho.MdiParent = Me
+        NewMDIFilho.Show()
     End Sub
 
-    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
-        Dim NewMDIFilho As New CadastroObjetivo()
+    Private Sub ToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem3.Click
+        'sair
+    End Sub
+
+    Private Sub TabelaDeAlimentoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TabelaDeAlimentoToolStripMenuItem.Click
+        Dim NewMDIFilho As New CadastroAlimento()
+        NewMDIFilho.MdiParent = Me
+        NewMDIFilho.Show()
+    End Sub
+
+    Private Sub TipoDeRefeiçãoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TipoDeRefeiçãoToolStripMenuItem.Click
+        Dim NewMDIFilho As New CadastroRefeicao()
+        NewMDIFilho.MdiParent = Me
+        NewMDIFilho.Show()
+    End Sub
+
+    Private Sub CadastroDeAtividadesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CadastroDeAtividadesToolStripMenuItem.Click
+        Dim NewMDIFilho As New CadastroAtividade()
         NewMDIFilho.MdiParent = Me
         NewMDIFilho.Show()
     End Sub

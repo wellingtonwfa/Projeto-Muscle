@@ -25,7 +25,10 @@ Partial Class SAN
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
+        Me.TabelaDeAlimentoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TipoDeRefeiçãoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CadastroDeObjetivosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CadastroDeAtividadesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.NomeCliente = New System.Windows.Forms.ToolStripStatusLabel()
@@ -50,16 +53,34 @@ Partial Class SAN
         '
         'ToolStripMenuItem2
         '
-        Me.ToolStripMenuItem2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripTextBox1})
+        Me.ToolStripMenuItem2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TabelaDeAlimentoToolStripMenuItem, Me.TipoDeRefeiçãoToolStripMenuItem, Me.CadastroDeObjetivosToolStripMenuItem, Me.CadastroDeAtividadesToolStripMenuItem})
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
         Me.ToolStripMenuItem2.Size = New System.Drawing.Size(86, 20)
         Me.ToolStripMenuItem2.Text = "Manutenção"
         '
-        'ToolStripTextBox1
+        'TabelaDeAlimentoToolStripMenuItem
         '
-        Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
-        Me.ToolStripTextBox1.Size = New System.Drawing.Size(100, 23)
-        Me.ToolStripTextBox1.Text = "Novo"
+        Me.TabelaDeAlimentoToolStripMenuItem.Name = "TabelaDeAlimentoToolStripMenuItem"
+        Me.TabelaDeAlimentoToolStripMenuItem.Size = New System.Drawing.Size(195, 22)
+        Me.TabelaDeAlimentoToolStripMenuItem.Text = "Tabela de Alimentos"
+        '
+        'TipoDeRefeiçãoToolStripMenuItem
+        '
+        Me.TipoDeRefeiçãoToolStripMenuItem.Name = "TipoDeRefeiçãoToolStripMenuItem"
+        Me.TipoDeRefeiçãoToolStripMenuItem.Size = New System.Drawing.Size(195, 22)
+        Me.TipoDeRefeiçãoToolStripMenuItem.Text = "Tipo de Refeição"
+        '
+        'CadastroDeObjetivosToolStripMenuItem
+        '
+        Me.CadastroDeObjetivosToolStripMenuItem.Name = "CadastroDeObjetivosToolStripMenuItem"
+        Me.CadastroDeObjetivosToolStripMenuItem.Size = New System.Drawing.Size(195, 22)
+        Me.CadastroDeObjetivosToolStripMenuItem.Text = "Cadastro de Objetivos"
+        '
+        'CadastroDeAtividadesToolStripMenuItem
+        '
+        Me.CadastroDeAtividadesToolStripMenuItem.Name = "CadastroDeAtividadesToolStripMenuItem"
+        Me.CadastroDeAtividadesToolStripMenuItem.Size = New System.Drawing.Size(195, 22)
+        Me.CadastroDeAtividadesToolStripMenuItem.Text = "Cadastro de Atividades"
         '
         'ToolStripMenuItem3
         '
@@ -106,7 +127,10 @@ Partial Class SAN
     Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem3 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ToolStripTextBox1 As System.Windows.Forms.ToolStripTextBox
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents NomeCliente As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents TabelaDeAlimentoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TipoDeRefeiçãoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CadastroDeObjetivosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CadastroDeAtividadesToolStripMenuItem As ToolStripMenuItem
 End Class

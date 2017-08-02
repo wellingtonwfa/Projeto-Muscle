@@ -108,6 +108,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>assisregisterDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CadastroAlimento.Designer.vb">
+      <DependentUpon>CadastroAlimento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroAlimento.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CadastroCliente.Designer.vb">
       <DependentUpon>CadastroCliente.vb</DependentUpon>
     </Compile>
@@ -120,10 +126,22 @@
     <Compile Include="CadastroObjetivo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CadastroRefeicao.Designer.vb">
+      <DependentUpon>CadastroRefeicao.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroRefeicao.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
     <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroAtividade.Designer.vb">
+      <DependentUpon>CadastroAtividade.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroAtividade.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMDI.Designer.vb">
@@ -149,11 +167,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CadastroAlimento.resx">
+      <DependentUpon>CadastroAlimento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroAtividade.resx">
+      <DependentUpon>CadastroAtividade.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CadastroCliente.resx">
       <DependentUpon>CadastroCliente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroObjetivo.resx">
       <DependentUpon>CadastroObjetivo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroRefeicao.resx">
+      <DependentUpon>CadastroRefeicao.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
