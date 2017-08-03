@@ -36,7 +36,7 @@ Partial Class CadastroAlimento
         Me.lblProteina = New System.Windows.Forms.Label()
         Me.txtQtdeLipideos = New System.Windows.Forms.TextBox()
         Me.lblLipideos = New System.Windows.Forms.Label()
-        Me.cbxCategoria = New System.Windows.Forms.ComboBox()
+        Me.cboCategoria = New System.Windows.Forms.ComboBox()
         Me.lblGramaCarb = New System.Windows.Forms.Label()
         Me.lblGramaProt = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -165,13 +165,13 @@ Partial Class CadastroAlimento
         Me.lblLipideos.TabIndex = 17
         Me.lblLipideos.Text = "Lípideos:"
         '
-        'cbxCategoria
+        'cboCategoria
         '
-        Me.cbxCategoria.FormattingEnabled = True
-        Me.cbxCategoria.Location = New System.Drawing.Point(416, 68)
-        Me.cbxCategoria.Name = "cbxCategoria"
-        Me.cbxCategoria.Size = New System.Drawing.Size(121, 21)
-        Me.cbxCategoria.TabIndex = 19
+        Me.cboCategoria.FormattingEnabled = True
+        Me.cboCategoria.Location = New System.Drawing.Point(416, 68)
+        Me.cboCategoria.Name = "cboCategoria"
+        Me.cboCategoria.Size = New System.Drawing.Size(121, 21)
+        Me.cboCategoria.TabIndex = 19
         '
         'lblGramaCarb
         '
@@ -258,7 +258,7 @@ Partial Class CadastroAlimento
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.lblGramaProt)
         Me.Controls.Add(Me.lblGramaCarb)
-        Me.Controls.Add(Me.cbxCategoria)
+        Me.Controls.Add(Me.cboCategoria)
         Me.Controls.Add(Me.txtQtdeLipideos)
         Me.Controls.Add(Me.lblLipideos)
         Me.Controls.Add(Me.txtQtdeProteina)
@@ -294,7 +294,7 @@ Partial Class CadastroAlimento
     Friend WithEvents lblProteina As Label
     Friend WithEvents txtQtdeLipideos As TextBox
     Friend WithEvents lblLipideos As Label
-    Friend WithEvents cbxCategoria As ComboBox
+    Friend WithEvents cboCategoria As ComboBox
     Friend WithEvents lblGramaCarb As Label
     Friend WithEvents lblGramaProt As Label
     Friend WithEvents GroupBox1 As GroupBox

@@ -1,13 +1,5 @@
 ﻿Public Class SAN
 
-    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
-        Dim NewMDIFilho As New CadastroCliente()
-        NewMDIFilho.MdiParent = Me
-        NewMDIFilho.Show()
-        'My.Forms.CadastroCliente.Show()
-        'CadastroCliente.Show()
-    End Sub
-
     Private Sub CadastroDeObjetivosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CadastroDeObjetivosToolStripMenuItem.Click
         Dim NewMDIFilho As New CadastroObjetivo()
         NewMDIFilho.MdiParent = Me
@@ -34,5 +26,13 @@
         Dim NewMDIFilho As New CadastroAtividade()
         NewMDIFilho.MdiParent = Me
         NewMDIFilho.Show()
+    End Sub
+
+    Private Sub CadastroToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CadastroToolStripMenuItem.Click
+        Dim NewMDIFilho As New CadastroCliente()
+        NewMDIFilho.MdiParent = Me
+        NewMDIFilho.Show()
+        'My.Forms.CadastroCliente.Show()
+        'CadastroCliente.Show()
     End Sub
 End Class

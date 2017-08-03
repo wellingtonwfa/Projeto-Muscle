@@ -32,6 +32,9 @@ Partial Class SAN
         Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.NomeCliente = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.CadastroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AvaliaçãoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DietaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -47,9 +50,10 @@ Partial Class SAN
         '
         'ToolStripMenuItem1
         '
+        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CadastroToolStripMenuItem, Me.AvaliaçãoToolStripMenuItem, Me.DietaToolStripMenuItem})
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(127, 20)
-        Me.ToolStripMenuItem1.Text = "Cadastro de Clientes"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(61, 20)
+        Me.ToolStripMenuItem1.Text = "Clientes"
         '
         'ToolStripMenuItem2
         '
@@ -104,6 +108,24 @@ Partial Class SAN
         Me.NomeCliente.Text = "NomeCliente"
         Me.NomeCliente.TextAlign = System.Drawing.ContentAlignment.TopLeft
         '
+        'CadastroToolStripMenuItem
+        '
+        Me.CadastroToolStripMenuItem.Name = "CadastroToolStripMenuItem"
+        Me.CadastroToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CadastroToolStripMenuItem.Text = "Cadastro"
+        '
+        'AvaliaçãoToolStripMenuItem
+        '
+        Me.AvaliaçãoToolStripMenuItem.Name = "AvaliaçãoToolStripMenuItem"
+        Me.AvaliaçãoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AvaliaçãoToolStripMenuItem.Text = "Avaliação"
+        '
+        'DietaToolStripMenuItem
+        '
+        Me.DietaToolStripMenuItem.Name = "DietaToolStripMenuItem"
+        Me.DietaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DietaToolStripMenuItem.Text = "Dieta"
+        '
         'SAN
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -133,4 +155,7 @@ Partial Class SAN
     Friend WithEvents TipoDeRefeiçãoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CadastroDeObjetivosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CadastroDeAtividadesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CadastroToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AvaliaçãoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DietaToolStripMenuItem As ToolStripMenuItem
 End Class

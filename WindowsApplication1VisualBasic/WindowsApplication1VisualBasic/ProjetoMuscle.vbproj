@@ -114,6 +114,12 @@
     <Compile Include="CadastroAlimento.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CadastroAvaliacao.Designer.vb">
+      <DependentUpon>CadastroAvaliacao.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroAvaliacao.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CadastroCliente.Designer.vb">
       <DependentUpon>CadastroCliente.vb</DependentUpon>
     </Compile>
@@ -172,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroAtividade.resx">
       <DependentUpon>CadastroAtividade.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroAvaliacao.resx">
+      <DependentUpon>CadastroAvaliacao.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroCliente.resx">
       <DependentUpon>CadastroCliente.vb</DependentUpon>
