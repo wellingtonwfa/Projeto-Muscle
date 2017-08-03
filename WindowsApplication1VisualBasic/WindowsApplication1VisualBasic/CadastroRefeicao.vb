@@ -6,7 +6,8 @@
     End Sub
     Private Sub BuscaDados()
 
-        Dim sql = "SELECT IdTipoRefeicao, NomeRefeicao FROM muscle.tb_tiporefeicao"
+        'Dim sql = "SELECT IdTipoRefeicao,1 as ordem, NomeRefeicao FROM muscle.tb_tiporefeicao"
+        Dim sql = "SELECT IdTipoRefeicao,@contador := @contador + 1 AS linha, NomeRefeicao FROM (SELECT @contador := 0) AS nada, muscle.tb_tiporefeicao"
 
         Dim dt As DataTable = DAL.AcessoBD.ExecutarComando(sql, CommandType.Text, Nothing, DAL.AcessoBD.TipoDeComando.ExecuteDataTable)
 

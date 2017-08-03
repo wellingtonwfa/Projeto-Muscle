@@ -45,3 +45,4 @@ C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBa
 C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\WindowsApplication1VisualBasic\obj\Debug\ProjetoMuscle.CadastroAlimento.resources
 C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\WindowsApplication1VisualBasic\obj\Debug\ProjetoMuscle.CadastroAtividade.resources
 C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\WindowsApplication1VisualBasic\obj\Debug\ProjetoMuscle.CadastroRefeicao.resources
+C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\WindowsApplication1VisualBasic\obj\Debug\ProjetoMuscle.CadastroAvaliacao.resources
