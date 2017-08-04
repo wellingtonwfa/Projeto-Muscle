@@ -32,8 +32,6 @@ Partial Class CadastroRefeicao
         Me.grdRefeicao = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.IdTipoRefeicao = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Ordem = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Nome = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.grdRefeicao, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -96,7 +94,7 @@ Partial Class CadastroRefeicao
         'grdRefeicao
         '
         Me.grdRefeicao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.grdRefeicao.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdTipoRefeicao, Me.Ordem, Me.Nome})
+        Me.grdRefeicao.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdTipoRefeicao})
         Me.grdRefeicao.Location = New System.Drawing.Point(6, 19)
         Me.grdRefeicao.Name = "grdRefeicao"
         Me.grdRefeicao.Size = New System.Drawing.Size(352, 135)
@@ -118,16 +116,6 @@ Partial Class CadastroRefeicao
         Me.IdTipoRefeicao.HeaderText = "IdTipoRefeicao"
         Me.IdTipoRefeicao.Name = "IdTipoRefeicao"
         Me.IdTipoRefeicao.Visible = False
-        '
-        'Ordem
-        '
-        Me.Ordem.HeaderText = "Ordem"
-        Me.Ordem.Name = "Ordem"
-        '
-        'Nome
-        '
-        Me.Nome.HeaderText = "Nome"
-        Me.Nome.Name = "Nome"
         '
         'CadastroRefeicao
         '
@@ -158,6 +146,4 @@ Partial Class CadastroRefeicao
     Friend WithEvents grdRefeicao As DataGridView
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents IdTipoRefeicao As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Ordem As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Nome As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

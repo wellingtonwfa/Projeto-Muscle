@@ -10,7 +10,21 @@
 
         Dim dt As DataTable = DAL.AcessoBD.ExecutarComando(sql, CommandType.Text, Nothing, DAL.AcessoBD.TipoDeComando.ExecuteDataTable)
 
-        grdAtividade.DataSource = dt
+        'grdAtividade.DataSource = dt
+
+        For Each dados As Object In dt.TableName
+            Me.grdAtividade.Rows.Add(dados.Item("IdAtividade"), dados.Item("Nome"))
+            'Me.grdAtividade.Rows.Add(dados.Item("IdAtividade").ToString(), dados.Rows(0).Item("Nome").ToString())
+        Next
+
+        'dt.Rows(0).Item("NomePessoa").ToString()
+
+        'With grdAtividade 'with significa com e substitui variavel a frente dele
+        '    .Columns(1).HeaderText = "Ordem"
+        '    .Columns(2).HeaderText = "Nome"
+        '    'numero refere-se as posições dos campos
+        'End With
+
     End Sub
 
     Private Sub ImbExcluir_Click(sender As Object, e As EventArgs) Handles imbExcluir.Click

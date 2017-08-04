@@ -11,7 +11,31 @@
 
         Dim dt As DataTable = DAL.AcessoBD.ExecutarComando(sql, CommandType.Text, Nothing, DAL.AcessoBD.TipoDeComando.ExecuteDataTable)
 
+        'grdRefeicao.Columns.Add("idfuncionario", "ID")
+        'grdRefeicao.Columns.Add("Descricao", "Ordem")
+        'grdRefeicao.Columns.Add("nome", "Nome")
+
+        'While dt.Read()
+        '    Dim strActivo As String
+
+        '    If dt.Item("activo") = "S" Then
+        '        strActivo = "Sim"
+        '    Else
+        '        strActivo = "Não"
+        '    End If
+
+        '    grdRefeicao.Rows.Add(dt.Item("idfuncionario"), dt.Item("descricao"), dt.Item("nome"), strActivo, dt.Item("custo"), dt.Item("utilizador"))
+        'End While
+
         Me.grdRefeicao.DataSource = dt
+
+        With grdRefeicao 'with significa com e substitui variavel a frente dele
+            .Columns(1).HeaderText = "Ordem"
+            .Columns(2).HeaderText = "Nome"
+            'numero refere-se as posições dos campos
+        End With
+
+        'Me.grdRefeicao.DataSource = dt
 
     End Sub
 

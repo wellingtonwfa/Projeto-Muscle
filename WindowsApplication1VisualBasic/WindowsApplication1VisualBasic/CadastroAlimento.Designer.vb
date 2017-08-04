@@ -41,7 +41,7 @@ Partial Class CadastroAlimento
         Me.lblGramaProt = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.lblPesquisar = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnPesquisar = New System.Windows.Forms.Button()
         Me.grdAlimento = New System.Windows.Forms.DataGridView()
         Me.txtNomeAlimentoPesq = New System.Windows.Forms.TextBox()
         Me.lblNomeAlimentoPesq = New System.Windows.Forms.Label()
@@ -196,7 +196,7 @@ Partial Class CadastroAlimento
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.lblPesquisar)
-        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.btnPesquisar)
         Me.GroupBox1.Controls.Add(Me.grdAlimento)
         Me.GroupBox1.Controls.Add(Me.txtNomeAlimentoPesq)
         Me.GroupBox1.Controls.Add(Me.lblNomeAlimentoPesq)
@@ -210,20 +210,20 @@ Partial Class CadastroAlimento
         '
         Me.lblPesquisar.AutoSize = True
         Me.lblPesquisar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPesquisar.Location = New System.Drawing.Point(396, 33)
+        Me.lblPesquisar.Location = New System.Drawing.Point(345, 30)
         Me.lblPesquisar.Name = "lblPesquisar"
         Me.lblPesquisar.Size = New System.Drawing.Size(62, 13)
         Me.lblPesquisar.TabIndex = 16
         Me.lblPesquisar.Text = "Pesquisar"
         '
-        'Button1
+        'btnPesquisar
         '
-        Me.Button1.Location = New System.Drawing.Point(315, 28)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 15
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnPesquisar.Image = Global.ProjetoMuscle.My.Resources.Resources.pesquisar20x20
+        Me.btnPesquisar.Location = New System.Drawing.Point(315, 23)
+        Me.btnPesquisar.Name = "btnPesquisar"
+        Me.btnPesquisar.Size = New System.Drawing.Size(31, 27)
+        Me.btnPesquisar.TabIndex = 15
+        Me.btnPesquisar.UseVisualStyleBackColor = True
         '
         'grdAlimento
         '
@@ -301,6 +301,6 @@ Partial Class CadastroAlimento
     Friend WithEvents txtNomeAlimentoPesq As TextBox
     Friend WithEvents lblNomeAlimentoPesq As Label
     Friend WithEvents grdAlimento As DataGridView
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnPesquisar As Button
     Friend WithEvents lblPesquisar As Label
 End Class

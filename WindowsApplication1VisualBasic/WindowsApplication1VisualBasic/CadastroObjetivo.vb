@@ -44,6 +44,13 @@
         Dim dt As DataTable = DAL.AcessoBD.ExecutarComando(sql, CommandType.Text, Nothing, DAL.AcessoBD.TipoDeComando.ExecuteDataTable)
 
         grdObjetivo.DataSource = dt
+
+        With grdObjetivo 'with significa com e substitui variavel a frente dele
+            .Columns(0).HeaderText = "Ordem"
+            .Columns(1).HeaderText = "Nome"
+            'numero refere-se as posições dos campos
+        End With
+
     End Sub
     Private Sub grdObjetivo_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grdObjetivo.CellContentClick
 
