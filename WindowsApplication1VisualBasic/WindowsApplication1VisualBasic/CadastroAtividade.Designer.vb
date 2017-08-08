@@ -31,6 +31,9 @@ Partial Class CadastroAtividade
         Me.grdAtividade = New System.Windows.Forms.DataGridView()
         Me.txtAtividade = New System.Windows.Forms.TextBox()
         Me.lblNome = New System.Windows.Forms.Label()
+        Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Ordem = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nome = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.grdAtividade, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -86,7 +89,9 @@ Partial Class CadastroAtividade
         '
         'grdAtividade
         '
+        Me.grdAtividade.AllowUserToAddRows = False
         Me.grdAtividade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.grdAtividade.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id, Me.Ordem, Me.Nome})
         Me.grdAtividade.Location = New System.Drawing.Point(6, 19)
         Me.grdAtividade.Name = "grdAtividade"
         Me.grdAtividade.Size = New System.Drawing.Size(352, 135)
@@ -108,6 +113,22 @@ Partial Class CadastroAtividade
         Me.lblNome.Size = New System.Drawing.Size(43, 13)
         Me.lblNome.TabIndex = 6
         Me.lblNome.Text = "Nome:"
+        '
+        'Id
+        '
+        Me.Id.HeaderText = "Id"
+        Me.Id.Name = "Id"
+        Me.Id.Visible = False
+        '
+        'Ordem
+        '
+        Me.Ordem.HeaderText = "Ordem"
+        Me.Ordem.Name = "Ordem"
+        '
+        'Nome
+        '
+        Me.Nome.HeaderText = "Nome"
+        Me.Nome.Name = "Nome"
         '
         'CadastroAtividade
         '
@@ -137,4 +158,7 @@ Partial Class CadastroAtividade
     Friend WithEvents grdAtividade As DataGridView
     Friend WithEvents txtAtividade As TextBox
     Friend WithEvents lblNome As Label
+    Friend WithEvents Id As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Ordem As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Nome As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

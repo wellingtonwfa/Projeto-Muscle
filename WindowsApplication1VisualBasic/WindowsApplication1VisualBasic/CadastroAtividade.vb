@@ -8,22 +8,39 @@
 
         Dim sql = "SELECT IdAtividade, Nome FROM muscle.tb_atividades"
 
-        Dim dt As DataTable = DAL.AcessoBD.ExecutarComando(sql, CommandType.Text, Nothing, DAL.AcessoBD.TipoDeComando.ExecuteDataTable)
+        Dim dt As Object = DAL.AcessoBD.ExecutarComando(sql, CommandType.Text, Nothing, DAL.AcessoBD.TipoDeComando.ExecuteDataSet)
 
         'grdAtividade.DataSource = dt
+        Try
+            Me.grdAtividade.DataSource = Nothing
+            Dim intCount As Integer = 1
+            For i As Integer = dt.Tables(0).Rows.Count - 1 To 0 Step -1
+                Me.grdAtividade.Rows.Add(dt.Tables(0).Rows(i)("IdAtividade"), intCount, dt.Tables(0).Rows(i)("Nome"))
 
-        For Each dados As Object In dt.TableName
-            Me.grdAtividade.Rows.Add(dados.Item("IdAtividade"), dados.Item("Nome"))
-            'Me.grdAtividade.Rows.Add(dados.Item("IdAtividade").ToString(), dados.Rows(0).Item("Nome").ToString())
-        Next
+                intCount = intCount + 1
+                'With grdAtividade.Rows 'with significa com e substitui variavel a frente dele
+                '    .Add(dt.Tables(0).Rows(i)("IdAtividade"), i, dt.Tables(0).Rows(i)("Nome"))
+                '    '.Add(i)
+                '    '.Add(dt.Tables(0).Rows(i)("Nome"))
+                '    'numero refere-se as posições dos campos
+                'End With
+            Next
+            'With Me.grdAtividade
+            '    .Columns(0).DisplayIndex = 0
+            '    .Columns(1).DisplayIndex = 1
+            '    .Columns(2).DisplayIndex = 2
+            'End With
+        Catch ex As Exception
+
+        End Try
+
+        'For Each dados As Object In dt.TableName
+        '    Me.grdAtividade.Rows.Add(dados.Item("IdAtividade"), dados.Item("Nome"))
+        '    'Me.grdAtividade.Rows.Add(dados.Item("IdAtividade").ToString(), dados.Rows(0).Item("Nome").ToString())
+        'Next
 
         'dt.Rows(0).Item("NomePessoa").ToString()
 
-        'With grdAtividade 'with significa com e substitui variavel a frente dele
-        '    .Columns(1).HeaderText = "Ordem"
-        '    .Columns(2).HeaderText = "Nome"
-        '    'numero refere-se as posições dos campos
-        'End With
 
     End Sub
 
@@ -61,7 +78,7 @@
         If intIdAtividade = 0 Then
 
             For Each dtObjetvo As DataGridViewRow In grdAtividade.Rows
-                If dtObjetvo.Cells(1).Value = strAtividade Then
+                If dtObjetvo.Cells(2).Value = strAtividade Then
                     MessageBox.Show("Já existe essa Atividade!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Exit Sub
                 End If
