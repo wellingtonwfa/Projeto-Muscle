@@ -29,11 +29,11 @@ Partial Class CadastroAtividade
         Me.imbExcluir = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.grdAtividade = New System.Windows.Forms.DataGridView()
-        Me.txtAtividade = New System.Windows.Forms.TextBox()
-        Me.lblNome = New System.Windows.Forms.Label()
         Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Ordem = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Nome = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.txtAtividade = New System.Windows.Forms.TextBox()
+        Me.lblNome = New System.Windows.Forms.Label()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.grdAtividade, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -90,12 +90,33 @@ Partial Class CadastroAtividade
         'grdAtividade
         '
         Me.grdAtividade.AllowUserToAddRows = False
+        Me.grdAtividade.AllowUserToOrderColumns = True
+        Me.grdAtividade.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.grdAtividade.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.grdAtividade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdAtividade.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id, Me.Ordem, Me.Nome})
         Me.grdAtividade.Location = New System.Drawing.Point(6, 19)
         Me.grdAtividade.Name = "grdAtividade"
         Me.grdAtividade.Size = New System.Drawing.Size(352, 135)
         Me.grdAtividade.TabIndex = 0
+        '
+        'Id
+        '
+        Me.Id.HeaderText = "Id"
+        Me.Id.Name = "Id"
+        Me.Id.Visible = False
+        '
+        'Ordem
+        '
+        Me.Ordem.HeaderText = "Ordem"
+        Me.Ordem.Name = "Ordem"
+        Me.Ordem.Width = 68
+        '
+        'Nome
+        '
+        Me.Nome.HeaderText = "Nome"
+        Me.Nome.Name = "Nome"
+        Me.Nome.Width = 64
         '
         'txtAtividade
         '
@@ -113,22 +134,6 @@ Partial Class CadastroAtividade
         Me.lblNome.Size = New System.Drawing.Size(43, 13)
         Me.lblNome.TabIndex = 6
         Me.lblNome.Text = "Nome:"
-        '
-        'Id
-        '
-        Me.Id.HeaderText = "Id"
-        Me.Id.Name = "Id"
-        Me.Id.Visible = False
-        '
-        'Ordem
-        '
-        Me.Ordem.HeaderText = "Ordem"
-        Me.Ordem.Name = "Ordem"
-        '
-        'Nome
-        '
-        Me.Nome.HeaderText = "Nome"
-        Me.Nome.Name = "Nome"
         '
         'CadastroAtividade
         '

@@ -25,11 +25,21 @@
                 '    'numero refere-se as posições dos campos
                 'End With
             Next
+
+            With grdAtividade
+                With .Columns
+                    .Item(1).Width = 50 : .Item(1).Visible = True
+                    .Item(2).Width = 500 : .Item(2).Visible = True
+                End With
+            End With
+
+            'Me.grdAtividade.Columns(2).DefaultCellStyle.Format = "330"
+            'Me.grdAtividade.Columns(3).HeaderCell. = "530"
+
             'With Me.grdAtividade
-            '    .Columns(0).DisplayIndex = 0
-            '    .Columns(1).DisplayIndex = 1
-            '    .Columns(2).DisplayIndex = 2
+            '    .Width = 230
             'End With
+
         Catch ex As Exception
 
         End Try

@@ -14,3 +14,4 @@ C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBa
 C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\DAL\obj\Debug\DAL.dll
 C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\DAL\obj\Debug\DAL.xml
 C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\DAL\obj\Debug\DAL.pdb
+C:\Users\00259923176\Documents\GitHub\Projeto-Muscle\WindowsApplication1VisualBasic\DAL\obj\Debug\DAL.vbprojResolveAssemblyReference.cache
