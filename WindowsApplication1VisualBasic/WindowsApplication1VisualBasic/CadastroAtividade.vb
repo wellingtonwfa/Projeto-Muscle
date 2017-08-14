@@ -7,13 +7,13 @@
     Private Sub BuscarDados()
 
         Try
-            Dim intCount As Integer = 1
+            Dim intCount2 As Integer = 1
             Dim sql = "SELECT IdAtividade, Nome FROM muscle.tb_atividades"
             Dim dt As Object = DAL.AcessoBD.ExecutarComando(sql, CommandType.Text, Nothing, DAL.AcessoBD.TipoDeComando.ExecuteDataSet)
 
-            For i As Integer = dt.Tables(0).Rows.Count - 1 To 0 Step -1
-                Me.grdAtividade.Rows.Add(dt.Tables(0).Rows(i)("IdAtividade"), intCount, dt.Tables(0).Rows(i)("Nome"))
-                intCount = intCount + 1
+            For intCount As Integer = dt.Tables(0).Rows.Count - 1 To 0 Step -1
+                Me.grdAtividade.Rows.Add(dt.Tables(0).Rows(intCount)("IdAtividade"), intCount2, dt.Tables(0).Rows(intCount)("Nome"))
+                intCount2 = intCount2 + 1
             Next
 
             'With grdAtividade

@@ -5,37 +5,21 @@
         BuscaDados()
     End Sub
     Private Sub BuscaDados()
+        Dim intCount2 As Integer = 1
 
-        'Dim sql = "SELECT IdTipoRefeicao,1 as ordem, NomeRefeicao FROM muscle.tb_tiporefeicao"
-        Dim sql = "SELECT IdTipoRefeicao,@contador := @contador + 1 AS linha, NomeRefeicao FROM (SELECT @contador := 0) AS nada, muscle.tb_tiporefeicao"
+        Try
+            Dim sql = "SELECT IdTipoRefeicao, NomeRefeicao FROM muscle.tb_tiporefeicao"
 
-        Dim dt As DataTable = DAL.AcessoBD.ExecutarComando(sql, CommandType.Text, Nothing, DAL.AcessoBD.TipoDeComando.ExecuteDataTable)
+            Dim dt As Object = DAL.AcessoBD.ExecutarComando(sql, CommandType.Text, Nothing, DAL.AcessoBD.TipoDeComando.ExecuteDataSet)
 
-        'grdRefeicao.Columns.Add("idfuncionario", "ID")
-        'grdRefeicao.Columns.Add("Descricao", "Ordem")
-        'grdRefeicao.Columns.Add("nome", "Nome")
+            For intCount As Integer = dt.Tables(0).Rows.Count - 1 To 0 Step -1
+                Me.grdRefeicao.Rows.Add(dt.Tables(0).Rows(intCount)("IdTipoRefeicao"), intCount2, dt.Tables(0).Rows(intCount)("NomeRefeicao"))
+                intCount2 = intCount2 + 1
+            Next
 
-        'While dt.Read()
-        '    Dim strActivo As String
-
-        '    If dt.Item("activo") = "S" Then
-        '        strActivo = "Sim"
-        '    Else
-        '        strActivo = "Não"
-        '    End If
-
-        '    grdRefeicao.Rows.Add(dt.Item("idfuncionario"), dt.Item("descricao"), dt.Item("nome"), strActivo, dt.Item("custo"), dt.Item("utilizador"))
-        'End While
-
-        Me.grdRefeicao.DataSource = dt
-
-        With grdRefeicao 'with significa com e substitui variavel a frente dele
-            .Columns(1).HeaderText = "Ordem"
-            .Columns(2).HeaderText = "Nome"
-            'numero refere-se as posições dos campos
-        End With
-
-        'Me.grdRefeicao.DataSource = dt
+        Catch ex As Exception
+            MessageBox.Show("Erro ao buscar dados! " & ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
 
     End Sub
 
@@ -45,6 +29,7 @@
     Private Sub Salvar()
         Dim strRefeicao As String = ""
         Dim sql As String = ""
+        Dim strAcao As String = ""
 
         strRefeicao = RTrim(Me.txtRefeicao.Text)
 
@@ -52,26 +37,32 @@
             MessageBox.Show("Informe o nome da Refeição!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
 
-        If intIdRefeicao = 0 Then
+        Try
+            If intIdRefeicao = 0 Then
 
-            For Each dtObjetvo As DataGridViewRow In grdRefeicao.Rows
-                If dtObjetvo.Cells(1).Value = strRefeicao Then
-                    MessageBox.Show("Esse Refeição já existe!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    Exit Sub
-                End If
-            Next
+                For Each dtObjetvo As DataGridViewRow In grdRefeicao.Rows
+                    If dtObjetvo.Cells(1).Value = strRefeicao Then
+                        MessageBox.Show("Essa Refeição já existe!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        Exit Sub
+                    End If
+                Next
 
-            sql = "insert tb_tiporefeicao(NomeRefeicao) values('" + strRefeicao + "')"
-        Else
+                sql = "insert tb_tiporefeicao(NomeRefeicao) values('" + strRefeicao + "')"
+                strAcao = "criada"
+            Else
 
-            sql = "update muscle.tb_tiporefeicao set NomeRefeicao = '" + strRefeicao + "' where IdTipoRefeicao = " + CStr(intIdRefeicao)
+                sql = "update muscle.tb_tiporefeicao set NomeRefeicao = '" + strRefeicao + "' where IdTipoRefeicao = " + CStr(intIdRefeicao)
+                strAcao = "alterada"
+            End If
 
-        End If
+            Dim dt As DataSet = DAL.AcessoBD.ExecutarComando(sql, CommandType.Text, Nothing, DAL.AcessoBD.TipoDeComando.ExecuteDataSet)
 
-        Dim dt As DataSet = DAL.AcessoBD.ExecutarComando(sql, CommandType.Text, Nothing, DAL.AcessoBD.TipoDeComando.ExecuteDataSet)
+            MessageBox.Show("Refeição " & strAcao & " com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Catch ex As Exception
+            MessageBox.Show("Erro ao salvar dados! " & ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
 
         Limpar()
-
 
     End Sub
 
@@ -82,6 +73,7 @@
 
         intIdRefeicao = 0
         Me.txtRefeicao.Text = ""
+        Me.grdRefeicao.Rows.Clear()
         BuscaDados()
 
     End Sub
@@ -93,14 +85,19 @@
         Dim sql As String = ""
 
         If intIdRefeicao = 0 Then
-            MessageBox.Show("Selecione um Alimento na grid!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            MessageBox.Show("Selecione uma Refeição na grid!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Exit Sub
         End If
 
-        sql = "delete from muscle.tb_tiporefeicao where IdTipoRefeicao = " + CStr(intIdRefeicao)
+        Try
+            sql = "delete from muscle.tb_tiporefeicao where IdTipoRefeicao = " + CStr(intIdRefeicao)
 
-        Dim dt As DataSet = DAL.AcessoBD.ExecutarComando(sql, CommandType.Text, Nothing, DAL.AcessoBD.TipoDeComando.ExecuteDataSet)
-
+            Dim dt As DataSet = DAL.AcessoBD.ExecutarComando(sql, CommandType.Text, Nothing, DAL.AcessoBD.TipoDeComando.ExecuteDataSet)
+            
+            MessageBox.Show("Refeição excluída com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Catch ex As Exception
+            MessageBox.Show("Erro ao excluir dados! " & ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
         Limpar()
 
 
@@ -109,7 +106,7 @@
     Private Sub grdRefeicao_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grdRefeicao.CellContentClick
 
         intIdRefeicao = grdRefeicao.Rows(e.RowIndex).Cells(0).Value.ToString()
-        Me.txtRefeicao.Text = grdRefeicao.Rows(e.RowIndex).Cells(1).Value.ToString()
+        Me.txtRefeicao.Text = grdRefeicao.Rows(e.RowIndex).Cells(2).Value.ToString()
 
     End Sub
 End Class

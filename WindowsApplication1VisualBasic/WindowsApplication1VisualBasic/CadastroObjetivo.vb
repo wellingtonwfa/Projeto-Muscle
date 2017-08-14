@@ -7,6 +7,7 @@
     Private Sub Salvar()
         Dim strObjetivo As String = ""
         Dim sql As String = ""
+        Dim strAcao As String = ""
 
         strObjetivo = RTrim(Me.TextBox1.Text)
 
@@ -14,23 +15,30 @@
             MessageBox.Show("Informe um Objetivo!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
 
-        If intIdObjetivo = 0 Then
+        Try
+            If intIdObjetivo = 0 Then
 
-            For Each dtObjetvo As DataGridViewRow In grdObjetivo.Rows
-                If dtObjetvo.Cells(1).Value = strObjetivo Then
-                    MessageBox.Show("Já existe esse Objetivo!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    Exit Sub
-                End If
-            Next
+                For Each dtObjetvo As DataGridViewRow In grdObjetivo.Rows
+                    If dtObjetvo.Cells(1).Value = strObjetivo Then
+                        MessageBox.Show("Já existe esse Objetivo!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        Exit Sub
+                    End If
+                Next
 
-            sql = "insert tb_objetivos(NomeObjetivo) values('" + strObjetivo + "')"
-        Else
+                sql = "insert tb_objetivos(NomeObjetivo) values('" + strObjetivo + "')"
+                strAcao = "criada"
+            Else
 
-            sql = "update muscle.tb_objetivos set NomeObjetivo = '" + strObjetivo + "' where idObjetivo = " + CStr(intIdObjetivo)
+                sql = "update muscle.tb_objetivos set NomeObjetivo = '" + strObjetivo + "' where idObjetivo = " + CStr(intIdObjetivo)
+                strAcao = "alterada"
+            End If
 
-        End If
-
-        Dim dt As DataSet = DAL.AcessoBD.ExecutarComando(sql, CommandType.Text, Nothing, DAL.AcessoBD.TipoDeComando.ExecuteDataSet)
+            Dim dt As DataSet = DAL.AcessoBD.ExecutarComando(sql, CommandType.Text, Nothing, DAL.AcessoBD.TipoDeComando.ExecuteDataSet)
+            
+            MessageBox.Show("Objetivo " & strAcao & " com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Catch ex As Exception
+            MessageBox.Show("Erro ao salvar dados! " & ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
 
         Limpar()
     End Sub
@@ -38,29 +46,33 @@
         BuscaDados()
     End Sub
     Private Sub BuscaDados()
+        Dim intCount2 As Integer = 1
 
-        Dim sql = "SELECT idObjetivo, NomeObjetivo FROM muscle.tb_objetivos"
+        Try
+            Dim sql = "SELECT idObjetivo, NomeObjetivo FROM muscle.tb_objetivos"
 
-        Dim dt As DataTable = DAL.AcessoBD.ExecutarComando(sql, CommandType.Text, Nothing, DAL.AcessoBD.TipoDeComando.ExecuteDataTable)
+            Dim dt As Object = DAL.AcessoBD.ExecutarComando(sql, CommandType.Text, Nothing, DAL.AcessoBD.TipoDeComando.ExecuteDataSet)
 
-        grdObjetivo.DataSource = dt
+            For intCount As Integer = dt.Tables(0).Rows.Count - 1 To 0 Step -1
+                Me.grdObjetivo.Rows.Add(dt.Tables(0).Rows(intCount)("idObjetivo"), intCount2, dt.Tables(0).Rows(intCount)("NomeObjetivo"))
+                intCount2 = intCount2 + 1
+            Next
 
-        With grdObjetivo 'with significa com e substitui variavel a frente dele
-            .Columns(0).HeaderText = "Ordem"
-            .Columns(1).HeaderText = "Nome"
-            'numero refere-se as posições dos campos
-        End With
+        Catch ex As Exception
+            MessageBox.Show("Erro ao buscar dados! " & ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
 
     End Sub
     Private Sub grdObjetivo_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grdObjetivo.CellContentClick
 
         intIdObjetivo = grdObjetivo.Rows(e.RowIndex).Cells(0).Value.ToString()
-        Me.TextBox1.Text = grdObjetivo.Rows(e.RowIndex).Cells(1).Value.ToString()
+        Me.TextBox1.Text = grdObjetivo.Rows(e.RowIndex).Cells(2).Value.ToString()
 
     End Sub
     Private Sub Limpar()
         intIdObjetivo = 0
         Me.TextBox1.Text = ""
+        Me.grdObjetivo.Rows.Clear()
         BuscaDados()
     End Sub
 
@@ -79,9 +91,15 @@
             Exit Sub
         End If
 
-        sql = "delete from muscle.tb_objetivos where idObjetivo = " + CStr(intIdObjetivo)
+        Try
+            sql = "delete from muscle.tb_objetivos where idObjetivo = " + CStr(intIdObjetivo)
 
-        Dim dt As DataSet = DAL.AcessoBD.ExecutarComando(sql, CommandType.Text, Nothing, DAL.AcessoBD.TipoDeComando.ExecuteDataSet)
+            Dim dt As DataSet = DAL.AcessoBD.ExecutarComando(sql, CommandType.Text, Nothing, DAL.AcessoBD.TipoDeComando.ExecuteDataSet)
+
+            MessageBox.Show("Objetivo excluído com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Catch ex As Exception
+            MessageBox.Show("Erro ao excluir dados! " & ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
 
         Limpar()
     End Sub

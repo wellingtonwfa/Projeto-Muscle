@@ -33,6 +33,9 @@ Partial Class CadastroObjetivo
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
+        Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Ordem = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nome = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
         CType(Me.grdObjetivo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
@@ -68,7 +71,9 @@ Partial Class CadastroObjetivo
         '
         'grdObjetivo
         '
+        Me.grdObjetivo.AllowUserToAddRows = False
         Me.grdObjetivo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.grdObjetivo.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id, Me.Ordem, Me.Nome})
         Me.grdObjetivo.Location = New System.Drawing.Point(6, 19)
         Me.grdObjetivo.Name = "grdObjetivo"
         Me.grdObjetivo.Size = New System.Drawing.Size(352, 135)
@@ -117,6 +122,22 @@ Partial Class CadastroObjetivo
         Me.ToolStripButton3.Size = New System.Drawing.Size(36, 36)
         Me.ToolStripButton3.Text = "ToolStripButton3"
         '
+        'Id
+        '
+        Me.Id.HeaderText = "Id"
+        Me.Id.Name = "Id"
+        Me.Id.Visible = False
+        '
+        'Ordem
+        '
+        Me.Ordem.HeaderText = "Ordem"
+        Me.Ordem.Name = "Ordem"
+        '
+        'Nome
+        '
+        Me.Nome.HeaderText = "Nome"
+        Me.Nome.Name = "Nome"
+        '
         'CadastroObjetivo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -145,4 +166,7 @@ Partial Class CadastroObjetivo
     Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripButton2 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripButton3 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents Id As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Ordem As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Nome As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

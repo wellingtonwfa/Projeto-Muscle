@@ -90,9 +90,6 @@ Partial Class CadastroAtividade
         'grdAtividade
         '
         Me.grdAtividade.AllowUserToAddRows = False
-        Me.grdAtividade.AllowUserToOrderColumns = True
-        Me.grdAtividade.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
-        Me.grdAtividade.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.grdAtividade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdAtividade.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id, Me.Ordem, Me.Nome})
         Me.grdAtividade.Location = New System.Drawing.Point(6, 19)
@@ -105,6 +102,7 @@ Partial Class CadastroAtividade
         Me.Id.HeaderText = "Id"
         Me.Id.Name = "Id"
         Me.Id.Visible = False
+        Me.Id.Width = 5
         '
         'Ordem
         '
