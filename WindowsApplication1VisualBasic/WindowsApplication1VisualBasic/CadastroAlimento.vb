@@ -5,12 +5,23 @@
         BuscaDados()
     End Sub
     Private Sub BuscaDados()
+        Dim intCount2 As Integer = 1
 
-        Dim sql = "SELECT IdAlimento, NomeAlimento FROM muscle.tb_alimentos"
+        Try
+            Dim sql = "SELECT IdAlimento, NomeAlimento FROM muscle.tb_alimentos"
 
-        Dim dt As DataTable = DAL.AcessoBD.ExecutarComando(sql, CommandType.Text, Nothing, DAL.AcessoBD.TipoDeComando.ExecuteDataTable)
+            Dim dt As Object = DAL.AcessoBD.ExecutarComando(sql, CommandType.Text, Nothing, DAL.AcessoBD.TipoDeComando.ExecuteDataSet)
 
-        grdAlimento.DataSource = dt
+            For intCount As Integer = dt.Tables(0).Rows.Count - 1 To 0 Step -1
+                Me.grdAlimento.Rows.Add(dt.Tables(0).Rows(intCount)("IdAlimento"), intCount2, dt.Tables(0).Rows(intCount)("NomeAlimento"))
+                intCount2 = intCount2 + 1
+            Next
+
+            'grdAlimento.DataSource = dt
+
+        Catch ex As Exception
+            MessageBox.Show("Erro ao buscar dados! " & ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
 
     End Sub
     Private Sub ImbLimpar_Click(sender As Object, e As EventArgs) Handles imbLimpar.Click

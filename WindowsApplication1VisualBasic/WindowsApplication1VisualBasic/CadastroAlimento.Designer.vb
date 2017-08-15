@@ -45,6 +45,13 @@ Partial Class CadastroAlimento
         Me.grdAlimento = New System.Windows.Forms.DataGridView()
         Me.txtNomeAlimentoPesq = New System.Windows.Forms.TextBox()
         Me.lblNomeAlimentoPesq = New System.Windows.Forms.Label()
+        Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Ordem = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nome = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Categoria = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Carboidrato = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Proteina = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Lipideos = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.grdAlimento, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -227,7 +234,9 @@ Partial Class CadastroAlimento
         '
         'grdAlimento
         '
+        Me.grdAlimento.AllowUserToAddRows = False
         Me.grdAlimento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.grdAlimento.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id, Me.Ordem, Me.Nome, Me.Categoria, Me.Carboidrato, Me.Proteina, Me.Lipideos})
         Me.grdAlimento.Location = New System.Drawing.Point(10, 76)
         Me.grdAlimento.Name = "grdAlimento"
         Me.grdAlimento.Size = New System.Drawing.Size(491, 135)
@@ -249,6 +258,42 @@ Partial Class CadastroAlimento
         Me.lblNomeAlimentoPesq.Size = New System.Drawing.Size(91, 13)
         Me.lblNomeAlimentoPesq.TabIndex = 12
         Me.lblNomeAlimentoPesq.Text = "Nome Alimento"
+        '
+        'Id
+        '
+        Me.Id.HeaderText = "Id"
+        Me.Id.Name = "Id"
+        Me.Id.Visible = False
+        '
+        'Ordem
+        '
+        Me.Ordem.HeaderText = "Ordem"
+        Me.Ordem.Name = "Ordem"
+        '
+        'Nome
+        '
+        Me.Nome.HeaderText = "Nome"
+        Me.Nome.Name = "Nome"
+        '
+        'Categoria
+        '
+        Me.Categoria.HeaderText = "Categoria"
+        Me.Categoria.Name = "Categoria"
+        '
+        'Carboidrato
+        '
+        Me.Carboidrato.HeaderText = "Carboidrato"
+        Me.Carboidrato.Name = "Carboidrato"
+        '
+        'Proteina
+        '
+        Me.Proteina.HeaderText = "Proteína"
+        Me.Proteina.Name = "Proteina"
+        '
+        'Lipideos
+        '
+        Me.Lipideos.HeaderText = "Lípideos"
+        Me.Lipideos.Name = "Lipideos"
         '
         'CadastroAlimento
         '
@@ -303,4 +348,11 @@ Partial Class CadastroAlimento
     Friend WithEvents grdAlimento As DataGridView
     Friend WithEvents btnPesquisar As Button
     Friend WithEvents lblPesquisar As Label
+    Friend WithEvents Id As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Ordem As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Nome As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Categoria As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Carboidrato As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Proteina As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Lipideos As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
