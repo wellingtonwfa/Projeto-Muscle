@@ -54,19 +54,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>CM6gj4kwPVMbC06z0UVwZ3vqOV9dgss+iQg8oHlFRP4=</dsig:DigestValue>
+        <dsig:DigestValue>VKe0pAMbWkTfQaSqzzL3E3GBuZRYwtnG2W0QxEe5xBM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProjetoMuscle.exe" size="153040">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProjetoMuscle.exe" size="154576">
       <assemblyIdentity name="ProjetoMuscle" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>j9oTHXTsmZz5fAkSGDZPaMjn9ccWiG02R7uxquGT1lw=</dsig:DigestValue>
+        <dsig:DigestValue>a76Zn9fPsPXqEHTpu5B3OHXnbgtOm7lCMaI/GRk4EPw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -78,7 +78,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>AyBaA6oxTuVCsUgljJWlZvh0wf8C6eGSZP1KOHMMBF4=</dsig:DigestValue>
+        <dsig:DigestValue>rtLPRTf7emEGVBAbBrPoqs0Co/7Qb6YfvE5zVEl5u7w=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

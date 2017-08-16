@@ -8,16 +8,14 @@
         Dim intCount2 As Integer = 1
 
         Try
-            Dim sql = "SELECT IdAlimento, NomeAlimento FROM muscle.tb_alimentos"
+            Dim sql = "SELECT IdAlimento, a.IdTipoAlimento, t.NomeTipoAlimento, NomeAlimento, QtdProteina, QtdLipideo, QtdCarboidrato FROM muscle.tb_alimentos a inner join muscle.tb_TipoAlimentos t on a.idTipoAlimento = t.idTipoAlimento"
 
             Dim dt As Object = DAL.AcessoBD.ExecutarComando(sql, CommandType.Text, Nothing, DAL.AcessoBD.TipoDeComando.ExecuteDataSet)
 
             For intCount As Integer = dt.Tables(0).Rows.Count - 1 To 0 Step -1
-                Me.grdAlimento.Rows.Add(dt.Tables(0).Rows(intCount)("IdAlimento"), intCount2, dt.Tables(0).Rows(intCount)("NomeAlimento"))
+                Me.grdAlimento.Rows.Add(dt.Tables(0).Rows(intCount)("IdAlimento"), dt.Tables(0).Rows(intCount)("IdTipoAlimento"), intCount2, dt.Tables(0).Rows(intCount)("NomeAlimento"), dt.Tables(0).Rows(intCount)("NomeTipoAlimento"), dt.Tables(0).Rows(intCount)("QtdProteina"), dt.Tables(0).Rows(intCount)("QtdLipideo"), dt.Tables(0).Rows(intCount)("QtdCarboidrato"))
                 intCount2 = intCount2 + 1
             Next
-
-            'grdAlimento.DataSource = dt
 
         Catch ex As Exception
             MessageBox.Show("Erro ao buscar dados! " & ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -32,9 +30,10 @@
         intIdAlimento = 0
         Me.txtAlimento.Text = ""
         Me.txtNomeAlimentoPesq.Text = ""
-        Me.txtQtdeCarboidr.Text = Nothing
-        Me.txtQtdeLipideos.Text = Nothing
-        Me.txtQtdeProteina.Text = Nothing
+        Me.txtQtdeCarboidr.Text = ""
+        Me.txtQtdeLipideos.Text = ""
+        Me.txtQtdeProteina.Text = ""
+        Me.grdAlimento.Rows.Clear()
         BuscaDados()
 
     End Sub

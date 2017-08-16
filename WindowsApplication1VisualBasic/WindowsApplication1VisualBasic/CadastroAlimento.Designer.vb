@@ -46,6 +46,7 @@ Partial Class CadastroAlimento
         Me.txtNomeAlimentoPesq = New System.Windows.Forms.TextBox()
         Me.lblNomeAlimentoPesq = New System.Windows.Forms.Label()
         Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdTipoAlimento = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Ordem = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Nome = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Categoria = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -236,7 +237,7 @@ Partial Class CadastroAlimento
         '
         Me.grdAlimento.AllowUserToAddRows = False
         Me.grdAlimento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.grdAlimento.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id, Me.Ordem, Me.Nome, Me.Categoria, Me.Carboidrato, Me.Proteina, Me.Lipideos})
+        Me.grdAlimento.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id, Me.IdTipoAlimento, Me.Ordem, Me.Nome, Me.Categoria, Me.Carboidrato, Me.Proteina, Me.Lipideos})
         Me.grdAlimento.Location = New System.Drawing.Point(10, 76)
         Me.grdAlimento.Name = "grdAlimento"
         Me.grdAlimento.Size = New System.Drawing.Size(491, 135)
@@ -264,6 +265,12 @@ Partial Class CadastroAlimento
         Me.Id.HeaderText = "Id"
         Me.Id.Name = "Id"
         Me.Id.Visible = False
+        '
+        'IdTipoAlimento
+        '
+        Me.IdTipoAlimento.HeaderText = "IdTipoAlimento"
+        Me.IdTipoAlimento.Name = "IdTipoAlimento"
+        Me.IdTipoAlimento.Visible = False
         '
         'Ordem
         '
@@ -349,6 +356,7 @@ Partial Class CadastroAlimento
     Friend WithEvents btnPesquisar As Button
     Friend WithEvents lblPesquisar As Label
     Friend WithEvents Id As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents IdTipoAlimento As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Ordem As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Nome As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Categoria As System.Windows.Forms.DataGridViewTextBoxColumn
